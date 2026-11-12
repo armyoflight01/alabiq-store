@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../js/**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-brand-red: #D91B24;
+    --color-brand-red-dark: #B5121B;
+    --color-brand-orange: #F97316;
+    --color-brand-amber: #F59E0B;
+    --color-brand-dark: #0F131D;
+}
+
+@layer utilities {
+    .bg-grid-warm {
+        background-image:
+            linear-gradient(to right, rgba(217, 27, 36, 0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(217, 27, 36, 0.04) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+
+    .bg-grid-dark {
+        background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 48px 48px;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
